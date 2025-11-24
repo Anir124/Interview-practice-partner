@@ -231,6 +231,5 @@ The app relies on local React state and lightweight contexts. For larger scale o
 ## 11 — Deployment notes
 
 * Build static assets with `npm run build`.
-* Host on static hosts (Netlify, Vercel) or S3 + CloudFront. If the app needs serverless APIs, consider Vercel Functions, Netlify Functions, or AWS Lambda.
 * For camera and microphone features be sure to serve the app over HTTPS (browser restrictions for getUserMedia).
 
