@@ -1,4 +1,4 @@
-# AI Interview Studio — Frontend (Lovable Edition)
+# AI Interview Studio — Frontend
 
 Comprehensive README for the frontend of *AI Interview Studio*. This README contains setup instructions, architecture notes, and design decisions.
 
