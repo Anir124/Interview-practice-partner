@@ -1,6 +1,6 @@
 # AI Interview Studio — Frontend (Lovable Edition)
 
-Comprehensive README for the frontend of *AI Interview Studio (Lovable Edition)*. This README contains setup instructions, architecture notes, and design decisions tailored to the codebase uploaded at `/mnt/data/loveable-interview-coach-main.zip`.
+Comprehensive README for the frontend of *AI Interview Studio*. This README contains setup instructions, architecture notes, and design decisions.
 
 ---
 
@@ -57,8 +57,8 @@ The stack is Vite + React (TypeScript) + Tailwind + shadcn-style UI primitives. 
 1. Unzip the uploaded archive (if you haven't already):
 
 ```bash
-unzip /mnt/data/loveable-interview-coach-main.zip -d ~/projects/
-cd ~/projects/loveable-interview-coach-main
+unzip /mnt/data/interview-coach-main.zip -d ~/projects/
+cd ~/projects/interview-coach-main
 ```
 
 2. Install dependencies
