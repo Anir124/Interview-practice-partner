@@ -178,7 +178,7 @@ The app relies on local React state and lightweight contexts. For larger scale o
 
 ## 9 — Backend integration (suggested contract)
 
-> The frontend includes sample fetch calls and expects the following JSON APIs. Adjust to your preferred backend.
+> The frontend includes sample fetch calls and expects the following JSON APIs.
 
 ### `POST /api/transcripts` — save a transcript entry
 
