@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Handcrafted Design System - Deep Space Theme */
+
+@layer base {
+  :root {
+    /* Deep space gradient colors */
+    --background: 217 45% 7%;
+    --background-end: 217 35% 14%;
+    --foreground: 210 25% 98%;
+    
+    /* Glassmorphic card with blur */
+    --card: 217 40% 12%;
+    --card-foreground: 210 25% 98%;
+    --card-border: 210 50% 40%;
+    
+    --popover: 217 40% 12%;
+    --popover-foreground: 210 25% 98%;
+    
+    /* Brand colors - Blue accent (#3F8CFF) */
+    --primary: 211 100% 62%;
+    --primary-foreground: 217 45% 7%;
+    --primary-glow: 211 100% 72%;
+    
+    /* Accent color (#63A4FF) */
+    --accent: 211 100% 69%;
+    --accent-foreground: 217 45% 7%;
+    
+    --secondary: 217 30% 18%;
+    --secondary-foreground: 210 25% 98%;
+    
+    --muted: 217 25% 15%;
+    --muted-foreground: 210 20% 70%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 25% 98%;
+    
+    --border: 210 40% 25%;
+    --input: 217 35% 18%;
+    --ring: 211 100% 62%;
+    
+    /* Custom radius for handcrafted look */
+    --radius: 1.125rem;
+    
+    /* Glassmorphic blur */
+    --glass-blur: 20px;
+    
+    /* Shadows with blue glow */
+    --shadow-glow: 0 8px 32px hsl(211 100% 62% / 0.25);
+    --shadow-glow-strong: 0 12px 48px hsl(211 100% 62% / 0.4);
+    
+    /* Gradients */
+    --gradient-space: linear-gradient(135deg, hsl(217 45% 7%), hsl(217 35% 14%));
+    --gradient-glass: linear-gradient(135deg, hsl(217 40% 12% / 0.6), hsl(217 35% 16% / 0.4));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--background-end)));
+    min-height: 100vh;
+    @apply text-foreground;
+    font-family: 'Plus Jakarta Sans', 'Geist', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Handcrafted Animations */
+
+@keyframes bounce-sphere {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-24px) scale(1.08); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.4), 0 0 60px hsl(var(--primary) / 0.2);
+  }
+  50% { 
+    box-shadow: 0 0 50px hsl(var(--primary) / 0.6), 0 0 100px hsl(var(--primary) / 0.3);
+  }
+}
+
+@keyframes halo-glow {
+  0%, 100% {
+    box-shadow: 0 0 60px hsl(var(--primary-glow) / 0.5), 0 0 120px hsl(var(--primary-glow) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 80px hsl(var(--primary-glow) / 0.7), 0 0 160px hsl(var(--primary-glow) / 0.4);
+  }
+}
+
+@keyframes mic-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 20px hsl(var(--primary) / 0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes waveform-bar {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+.bounce-sphere {
+  animation: bounce-sphere 0.9s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.avatar-speaking {
+  animation: halo-glow 1.8s ease-in-out infinite;
+}
+
+.mic-pulse {
+  animation: mic-pulse 2s ease-in-out infinite;
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.waveform-bar {
+  animation: waveform-bar 0.6s ease-in-out infinite;
+}
+
+/* Glassmorphic utilities */
+.glass-panel {
+  background: linear-gradient(135deg, hsl(var(--card) / 0.7), hsl(var(--card) / 0.5));
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid hsl(var(--card-border) / 0.2);
+  box-shadow: var(--shadow-glow);
+}
+
+.glass-panel-strong {
+  background: linear-gradient(135deg, hsl(var(--card) / 0.85), hsl(var(--card) / 0.65));
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid hsl(var(--card-border) / 0.3);
+  box-shadow: var(--shadow-glow-strong);
+}
